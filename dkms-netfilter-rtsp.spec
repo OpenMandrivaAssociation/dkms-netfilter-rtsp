@@ -63,5 +63,6 @@ EOF
 
 %files
 %defattr(0644,root,root,0755)
+%doc README
 %{_usrsrc}/%{module_name}-%{version}-%{release}
 
