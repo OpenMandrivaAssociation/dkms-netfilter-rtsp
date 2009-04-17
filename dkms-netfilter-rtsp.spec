@@ -3,7 +3,7 @@
 
 Name:		dkms-%{module_name}
 Version:	2.6.26
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		0
 Summary:	Netfilter %proto support (nat and conntrack)
 License:	GPLv2
@@ -13,7 +13,6 @@ Group:		System/Kernel and hardware
 Requires(post): coreutils
 Requires(post):	dkms
 Requires(preun): dkms
-Requires:	kernel >= 0:2.6.26
 Provides:	%{module_name} = %{epoch}:%{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Exclusivearch:	%{ix86} x86_64
@@ -37,8 +36,6 @@ PACKAGE_VERSION="%{version}-%{release}"
 
 # Items below here should not have to change with each driver version
 PACKAGE_NAME="%{module_name}"
-
-MAKE[0]="make"
 
 BUILT_MODULE_NAME[0]="\$PACKAGE_NAME"
 DEST_MODULE_LOCATION[0]="/kernel/net/netfilter"
