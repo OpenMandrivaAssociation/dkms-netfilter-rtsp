@@ -53,11 +53,12 @@ EOF
 %{_sbindir}/dkms add -m %{module_name} -v %{version}-%{release} --rpm_safe_upgrade
 %{_sbindir}/dkms build -m %{module_name} -v %{version}-%{release} --rpm_safe_upgrade
 %{_sbindir}/dkms install -m %{module_name} -v %{version}-%{release} --rpm_safe_upgrade
-/sbin/rmmod %{module_name} > /dev/null 2>&1
-/sbin/modprobe %{module_name}
+/sbin/rmmod nf_conntrack_rtsp
+/sbin/modprobe nf_conntrack_rtsp
+/sbin/rmmod nf_nat_rtsp
+/sbin/modprobe nf_nat_rtsp || :
 
 %preun
-%{__rm} -f %{_sysconfdir}/sysconfig/lm_sensors
 %{_sbindir}/dkms remove -m %{module_name} -v %{version}-%{release} --rpm_safe_upgrade --all || :
 
 %files
