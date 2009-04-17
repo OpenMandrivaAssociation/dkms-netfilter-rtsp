@@ -37,8 +37,10 @@ PACKAGE_VERSION="%{version}-%{release}"
 # Items below here should not have to change with each driver version
 PACKAGE_NAME="%{module_name}"
 
-BUILT_MODULE_NAME[0]="\$PACKAGE_NAME"
+BUILT_MODULE_NAME[0]="nf_conntrack_rtsp"
 DEST_MODULE_LOCATION[0]="/kernel/net/netfilter"
+BUILT_MODULE_NAME[1]="nf_nat_rtsp"
+DEST_MODULE_LOCATION[1]="/kernel/net/netfilter"
 
 AUTOINSTALL="yes"
 
