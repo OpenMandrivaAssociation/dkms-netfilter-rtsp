@@ -66,3 +66,19 @@ EOF
 %doc README
 %{_usrsrc}/%{module_name}-%{version}-%{release}
 
+
+
+%changelog
+* Fri Apr 17 2009 Pascal Terjan <pterjan@mandriva.org> 0:2.6.26-2mdv2009.1
++ Revision: 367931
+- Fix post scriplet
+- Do not remove /etc/sysconfig/lm_sensors on uninstall
+- Fix dkms.conf to list correct module names
+- Fix dkms make command
+
+* Tue Jan 20 2009 Michael Scherer <misc@mandriva.org> 0:2.6.26-1mdv2009.1
++ Revision: 331952
+- add doc
+- import dkms-netfilter-rtsp
+
+
