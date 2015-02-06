@@ -4,7 +4,7 @@
 Summary:	Netfilter RTSP support (nat and conntrack)
 Name:		dkms-%{module_name}
 Version:	3.7
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://mike.it-loops.com/rtsp/
