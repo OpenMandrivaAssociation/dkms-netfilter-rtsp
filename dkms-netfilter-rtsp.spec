@@ -7,7 +7,7 @@ Version:	3.7
 Release:	2
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://mike.it-loops.com/rtsp/
+Url:		https://mike.it-loops.com/rtsp/
 Source0:	%{proto}-module-%{version}-v2.tar.gz
 Source10:	%{name}.rpmlintrc
 Requires(post):	coreutils
